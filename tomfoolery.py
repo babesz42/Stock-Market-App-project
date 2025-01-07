@@ -47,7 +47,7 @@ class StockDataApp:
         self.ta_button = tk.Button(self.root, text='Techincal Analysis', command=self.Open_ta)
         self.ta_button.pack(pady=10)
 
-    def Get_data(self, API='I7P51WLUI128TBGE'):
+    def Get_data(self, API=''):
 
         self.symbol = self.search_entry.get().strip()
 
