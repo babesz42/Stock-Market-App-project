@@ -1,0 +1,39 @@
+Stock Data application:
+
+    Searching the data and showing it in a table or in a graph:
+
+        Adding a scrollbar to the data table veiw widget
+        ? Adding the symbol to the plot's title
+
+    Technical analysis:
+
+        In the same GUI, add a 'Technical analysis toolbox' button that directs the user to another window called 'Technical analysis toolbox'
+        When the user clicks this button, it automatically fetches all the data from the given stock and saves it and reuses the saved data to don't reuse the API
+        Then it offers options on what technical indicator the user would like to see
+        The user than can choose the indicator (maybe multiple indicators at once) and veiw it on a graph with the respected data
+
+        Another part of this window is the 'Built-in Analysis' which does some *magic calculations* (to be called later) and provides an overall suggestion on that stock
+        Buy, hold sell  OR IDEA: Stong Buy, Buy, hold, Sell, Strong sell --> probably will need to use a scale for that
+
+
+
+
+
+        Current:
+            The "Technical analysis" works as a subclass, the buttons for the indicators are added to "Technical Analysis Toolbox" window.
+            The MACD button works, it shows an interactive diagram which might need a little tuning, but overall badass looking
+            ? Make sure the calculations are okay, because the results look a little weird compared to the project we did last semeseter (most likely this one is THE good one)
+
+            Next up:
+            It would be better, to have two seperate functions for each indicator:
+            1. Calc_indicator(self):
+                self.ta_data_indicator = self.ta.ta_data_indicator.indicator() MAKE SURE TO APPEND
+            
+            2. Plot_indicator(self):
+                
+                Calc_indicator() # recall the calculation function
+                plotting the indicator
+
+            The reason to this is the "Built-in Analysis" function.
+            When I am going to build that function, it can safely recall on all the other indicators, and I will have a 
+            big table with all the indicators (that's why the APPEND is important)
