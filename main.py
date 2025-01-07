@@ -41,7 +41,7 @@ class StockDataApp:
         self.graph_button = tk.Button(self.root, text='Show graph', command=self.Show_graph)
         self.graph_button.pack(pady=10)
 
-    def Get_data(self, API='I7P51WLUI128TBGE'):
+    def Get_data(self, API=''):
         # Get the data and handling wrong symbol inputs
         symbol = self.search_entry.get().strip()
 
